@@ -1,0 +1,169 @@
+.data-container{
+  
+    background-color: rgb(146, 146, 146);
+    padding: 20px 0;
+    color: black;
+   
+
+  }
+  
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(249,249,249);
+    width: 22rem;
+    margin: 0 auto;
+    padding: 20px 0;
+    }
+  .input-conatiner{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .input-card-conatiner{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-33px) translateY(10px);
+  }
+
+  .master{
+    height: 21px;
+    width: 20px;
+  }
+  
+  img{
+    height: 100%; 
+    width: 100%; 
+  }
+  input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 80%;
+    height: 40px;
+  }
+  .btn{
+    padding: 5px;
+    background: green;
+    outline: none;
+    color: white;
+    border: none;
+    z-index: 100;
+  }
+
+  .date{
+    margin-bottom: 15px;
+  }
+  .month-year{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .month,.year {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .pin-container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 37%;
+    transform: translateX(-64px);
+  }
+  
+
+
+  .mnth, .yr {
+    width: 37%;
+
+  }
+
+  label{
+    transform: translateX(-14px);
+  }
+
+  .cvv{
+    transform: translateX(-114px);
+    text-transform: uppercase;
+  }
+
+  .link{
+    width: 100%;
+    text-decoration: none;
+    z-index: -1;
+  }
+
+
+
+  /* //////////////////////////////////////
+  //// OTP */
+
+  .otp-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #1a1a1d;
+}
+.otp-conatiner{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.otp{
+    outline: none;
+    border: 1px solid grey;
+    max-width: 40px;
+    height: 40px;
+    margin: 5px;}
+
+.otp-text{
+    margin-bottom: 20px;
+}
+
+.p-text{
+    color: black;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 375px){
+  .contact-form{
+    width: unset;
+
+  }
+}
