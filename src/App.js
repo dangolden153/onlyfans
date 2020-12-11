@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import Forms from './component/form-input/form-input'
-import Home from './component/home/home'
-// import Home fro./components/home/home.componentent';
-// import Input_data from './pages/input-data/input-data.component'
-// import Text fro./components/textext'
-// import HomePage fro./components/hompageage'
-// import Dasboard fro./components/dasboardard'
 
+import Home from './component/home/home'
+import SubscribePage from './component/subscibePage/subscrubPage'
+import Card  from './component/card/card'
+import HeaderNav from './component/headerNav/headerNav'
 import {Route, Switch} from 'react-router-dom'
 
 
@@ -33,30 +30,33 @@ import {Route, Switch} from 'react-router-dom'
   return (
     <div className="App">
 
+    <HeaderNav/>
+    
 <Switch>
   
-{/* <Route
- exact
- path='/'
+<Route exact path='/' component={Home} />
+
+
+<Route
+ path='/card'
   render ={ props => (
-  <HomePage {...props} handleLogin={this.handleLogin} isLoginStatus = {this.state.isLoginStatus}/>)} />
+  <Card {...props} handleLogin={this.handleLogin} isLoginStatus={this.state.isLoginStatus}/>)} />
 
 <Route  
-path='/dasboard'
+path='/sub'
 render ={ props => (
-<Dasboard {...props}  isLoginStatus = {this.state.isLoginStatus}/>)}
+<SubscribePage {...props}  isLoginStatus = {this.state.isLoginStatus}/>)}
 
  />
 
-<Route  
+{/* <Route  
 path='/home'
 render ={ props => (
 <Home {...props}  isLoginStatus = {this.state.isLoginStatus}/>)}
 
  /> */}
 
- <Route path='/' exact component={Home} />
- <Route path='/form' component={Forms} />
+ 
 
 </Switch>
       

@@ -1,54 +1,30 @@
-import React, {Component} from 'react'
-import Job from '../job-directory'
-import Jobs from '../jobs/jobs'
+import React from 'react'
+import pics from '../assets/ring.jpg'
+
 import './home.css'
-import pics from '../picture/work.jpg'
-import navbar from '../picture/nav.svg'
-import Footer from '../footer/footer'
 
+const Home =()=>(
 
-class Home extends Component{
-constructor(){
-    super()
-    this.state ={
-        jobCollection :Job
-    }
-}
-
-render(){
-
-    return(
-        <div className='home'>
-            <div className='homeContainer'>
-    
-                <div className="nav">
-                    <img src={navbar} alt="nav bar"/>
-                </div>
-                <div className="imgBox">
-                <img src={pics} alt="work at office"/>
+        
+        <div className="home">
+            <div className="homeCont">
+                <div className="profilePics" >
+        <img src={pics} alt="profile img" className='profileImg'/>
                 </div>
 
-                <div className="jobText">
-                An Online Portal That Helps You Find the Right Job 
-                That Matches Your Skills. Sign Up Now. We Also Provide 
-                You With Personalized Career Guidance To Help You Achieve 
-                Your Goals. Post your job today. Find your dream team. Hire
-                 top talent. Hire Qualified Candidates. 
-                Types: Jobs in Nigeria, Career Advice, CV Review.
-            </div>
-                <div className="job-Container">
-                {
-        this.state.jobCollection.map(job=> 
-        <Jobs key={job.id} job={job}>{job}</Jobs>)
-
-                }
+                <div className="profileText">
+                <h1>subcribe to watch free video</h1>
+                <a href="/card">subscribe</a>
                 </div>
-                
-                <Footer/>
+
+                <div className="subprofilePics" >
+        <img src={pics} alt="profile img" className='profileImg'/>
+                </div>
+        
             </div>
         </div>
-    )
-    }
-}
+
+  
+)
 
 export default Home
