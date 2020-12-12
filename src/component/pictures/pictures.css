@@ -1,0 +1,40 @@
+.picture{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.picsText{
+    padding: 0px 0 25px 0;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+.pictureImg{
+    height: 577px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.lockSvg{
+    width: 41px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+}
+
+.pictureBtn{
+    border: none;
+    background:#00aff0; ;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    left: 39%;
+    border-radius: 29px;
+    padding: 10px 20px;
+    outline: none;
+}
