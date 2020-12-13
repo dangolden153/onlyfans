@@ -16,14 +16,13 @@ code {
 }
 
 html{
-  height: 100vh;
-  width: 100%;
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-*{
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,4 +31,10 @@ html{
 color{
   color: #00aff0;
   background-color: rgba(138,150,163,.25);
+ color: #fff;
+    --bg-color-header: #fff;
+    --text-color: #242529;
+    --overlay-color: rgba(0,0,0,0.5);
+    --title-color: #242529;
+    --marked-color: #f6f7f8;
 }

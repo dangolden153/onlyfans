@@ -1,0 +1,75 @@
+
+
+.cardContainer{
+    padding: 0 82px 40px;
+    font-family: inherit;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(138,150,163,.25);
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.svgImg{
+    margin-right: 10px;
+}
+
+.cardHeading{
+    font-size: 18px;
+    font-weight: 600;
+}
+.form{
+
+}
+
+.formCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formRight{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.textDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.2;
+}
+
+.billingText{
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(138,150,163,.90);
+}
+
+.detailedText{
+    font-size: 13px;
+    font-weight: 500;
+    color: #242529;
+}
+
+.formleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.cardDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}

@@ -19,8 +19,6 @@ class Card extends Component {
 
         return(
             <div>
-                <h1>THIS IS OUR HOME PAGE</h1>
-                <h1>Status :{this.props.isLoginStatus}  </h1> 
                 <Form handleSucesfulAuth={this.handleSucesfulAuth} />
             </div>
         )

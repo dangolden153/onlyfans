@@ -1,7 +1,8 @@
 import React, {useState, useEffect, Component} from 'react'
 import Axios from 'axios'
-import {Switch, Link,Redirect  } from 'react-router-dom';
+import FormInput from '../formInput/formInput'
 
+import './form.css'
 
 class Form extends Component{
 constructor(props){
@@ -60,67 +61,153 @@ constructor(props){
       
 render(){
     return (
-        <div 
-        style={{
-            height:'50vh',
-            background:'pink',
-        }}>
+        <div className='cardContainer'>
             
-
-            
-    <form onSubmit={this.submitHandle}
-    style={{
-            marginTop:'10rem',
-            display:'flex',
-            flexDirection: 'column',
-            width: '50%',
-            margin:' 0 auto'
-        }}>   
-<input 
-style={{
-    margin:'10px',
-}}
-type="text"
-name= 'email'
-onChange={this.handleChange}
-value={this.state.email}
-required
-/>
-<a href='#'> {
-                this.state.message
-            }
-            </a>
-<input 
-style={{
-    margin:'10px',
-}}
-type="text"
-name= 'password'
-onChange={this.handleChange}
-value={this.state.password}
-required
-
-/>
-
-<input 
-style={{
-    margin:'10px',
-}}
-required
-type='number'
-name= 'number'
-onChange={this.handleChange}
-value={this.state.number}
-
-/>
+            <div className="cardHeader">
+                <div className="svgImg"></div>
+                <p className="cardHeading">ADD CARD</p>
+            </div>
 
 
 
-<button 
-// style={{
-//     margin:'10px',
-// }}
-type="submit">send</button>
+    <form onSubmit={this.submitHandle} 
+    className='form'
+    >  
+
+    <div className="formCont">
+
+
+    <div className="formRight">
+
+        <div className="textDetails">
+            <p className="billingText">
+                BILLING DETAILS
+            </p>
+            <p className="detailedText">
+                We are fully compliant with Payment Card Industry Data 
+                Security Standard
+            </p>
+
+        </div>
+
+
+        <FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+
+        </div> 
+
+
+        <div className="formleft">
+
+        <div className="cardDetails">
+            <p className="billingText">
+                CARD DETAILS
+            </p>
+           
+
+        </div>
+
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+
+        
+
+        </div>
+
+
+
+
+
+
+
+</div>
+<button type="submit">send</button>
 
 </form>  
         </div>

@@ -7,6 +7,7 @@ import Files from '../files/files'
 import Picture from '../pictures/pictures'
 import Achieve from '../achieve/achieve'
 import svg from '../assets/right-arrow.svg'
+import SubBenefit from '../subBenefit/subBenefit'
 import SubComponent from '../subComponent/subComponent'
 import './home.css'
 
@@ -85,7 +86,7 @@ return (
                 
                 <SubComponent />
                
-
+                <SubBenefit/>
                 
         
             </div>
