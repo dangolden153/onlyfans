@@ -3,7 +3,7 @@ import Video from '../video/video'
 import Files from '../files/files'
 import Picture from '../pictures/pictures'
 import Achieve from '../achieve/achieve'
-
+import SubBenefit from '../subBenefit/subBenefit'
 import './subComponent.css'
 import pics from '../assets/bag.svg'
 
@@ -12,6 +12,10 @@ import pics from '../assets/bag.svg'
 const SubComponent =()=>{
     const [state, setState] = useState(true)
     const [activeClass, setactiveClass] = useState('first')
+
+    const toggleState = ()=>{
+        setState(!state)
+}
 
     return (
 <div className='subComponent'>
@@ -51,10 +55,25 @@ const SubComponent =()=>{
         {activeClass === 'forth' && <Achieve/>}
 
 
-
-       '
+        <button onClick={toggleState}
+        className="pictureBtn">
+            SUBSCRIBE TO SEE USER'S POSTS
+         </button>
+        
+       
  </div>
 
+ <div
+               className={state ? "active" : "subBenefitBox"}>
+                   <div className="cancel"
+                   style={{
+                       height:'10px',
+                       width: '10px',
+                       background: 'white'
+                   }}
+                   ></div>
+               <SubBenefit/>
+               </div>
  </div>
     )
 }

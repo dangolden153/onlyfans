@@ -1,15 +1,28 @@
 .subBenefit{
     font-family: inherit;
+    position: relative;
+}
+
+.benefitBg{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.benefitCont{
+    position: fixed;
+    top: 49%;
+    left: 49%;
+    transform: translate(-50%, -50%);
     height: 524px;
     width: 326px;
     border-radius: 7px;
     background: white;
     overflow: hidden;
     border: 1px solid rgba(138,150,163,.25);
-}
 
-.benefitCont{
-    
 }
 
 
@@ -99,4 +112,8 @@
     font-size: 12px;
     color: rgba(138,150,163,1.25);
     text-align: center;
+}
+
+.subComponentLink{
+    text-decoration: none;
 }

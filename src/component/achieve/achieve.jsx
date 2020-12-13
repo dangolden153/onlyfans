@@ -20,9 +20,7 @@ const Achieve =()=>{
             <img src={svg} alt="img phics"/>
             </div>
 
-            <button className="pictureBtn">
-            SUBSCRIBE TO SEE USER'S POSTS
-            </button>
+        
         </div>
 
         </div>        </div>

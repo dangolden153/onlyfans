@@ -43,3 +43,11 @@
 .subContent{
     margin-top: 20px;
 }
+
+.subBenefitBox{
+    display: none;
+}
+
+.active{
+    display: block;
+}

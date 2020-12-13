@@ -2,16 +2,18 @@ import React from 'react'
 
 import './formInput.css'
 
-const FormInput =({label, ...otherProps})=>{
+const FormInput =({label,smallWidth, ...otherProps})=>{
 
     return(
-        <div className='formInputCont'>
+        <div className={ `formInputCont `}>
 
-            <input className="formInput" {...otherProps} />
+            <input className={` ${smallWidth ? 'smallWidth' : ''}
+            formInput`} {...otherProps} />
 
             {
                 label?(
                     <label  className={`${otherProps.value ? 'shrink' : '' }
+                    
                     formlabel`}>
                         {label}
                     </label>

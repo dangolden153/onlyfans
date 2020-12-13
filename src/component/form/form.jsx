@@ -134,6 +134,7 @@ render(){
         onChange={this.handleChange}
         value={this.state.email}
         required
+        
         />
 
 
@@ -158,33 +159,7 @@ render(){
         onChange={this.handleChange}
         value={this.state.email}
         required
-        />
 
-<FormInput 
-        type="text"
-        name= 'email'
-        label='email'
-        onChange={this.handleChange}
-        value={this.state.email}
-        required
-        />
-
-<FormInput 
-        type="text"
-        name= 'email'
-        label='email'
-        onChange={this.handleChange}
-        value={this.state.email}
-        required
-        />
-
-<FormInput 
-        type="text"
-        name= 'email'
-        label='email'
-        onChange={this.handleChange}
-        value={this.state.email}
-        required
         />
 
 <FormInput 
@@ -197,6 +172,65 @@ render(){
         />
 
         
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        />
+<div className="expiration">
+
+<p className="billingText">
+                EXPIRATION
+            </p>
+
+<div className="formFlex">
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        smallWidth
+
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        smallWidth
+
+        />
+
+<FormInput 
+        type="text"
+        name= 'email'
+        label='email'
+        onChange={this.handleChange}
+        value={this.state.email}
+        required
+        smallWidth
+
+        />
+
+</div>
+<div className="checkboxCont">
+    <input type="checkbox" className="checkbox"/>
+    <p className="detailedText checkboxText">
+        Tick here to comfirm at you are at least 18 years old 
+        and the age of majority in your place of residence
+    </p>
+</div>
+</div>
+
+
 
         </div>
 
@@ -207,9 +241,17 @@ render(){
 
 
 </div>
-<button type="submit">send</button>
 
-</form>  
+ 
+
+<button className='formBtn' type="submit">submit</button>
+</form> 
+
+<div className="onlyfansText">
+OnlyFans will make a one-time charge of $0.10 when adding your payment card. The charges 
+on your credit card statement will appear as "OnlyFans".
+</div>
+
         </div>
     )
     }

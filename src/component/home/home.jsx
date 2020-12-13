@@ -13,6 +13,7 @@ import './home.css'
 
 const Home =()=>{
 const [changeText , setchangeText] = useState(false)
+const [state, setState] = useState(false)
 
 const buttonText ='More info'
 const setbuttonText ='collaspe'
@@ -20,6 +21,7 @@ const setbuttonText ='collaspe'
 const toggleBtn = ()=>{
         setchangeText(!changeText)
 }
+
 
 
 return (
@@ -86,7 +88,7 @@ return (
                 
                 <SubComponent />
                
-                <SubBenefit/>
+               
                 
         
             </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import profile from '../assets/section4.jpg'
 import dp from '../assets/section3.jpg'
+import {Link} from 'react-router-dom'
 
 import './subBenefit.css'
 
@@ -8,7 +9,10 @@ const SubBenefit = ()=>{
 
     return(
         <div className="subBenefit">
+            <div className="benefitBg"></div>
             <div className="benefitCont">
+
+            <div className="cancelSvg"></div>
 
             <div className="subBenefitImgBox">
 
@@ -64,9 +68,12 @@ const SubBenefit = ()=>{
             <button className="benefitBtn">
         <div className="benefitContent">
                 <div className="contentSvg"></div>
+
+                <Link to='/card' className='subComponentLink'>
                 <div className="btncontentText">
                     PLEASE ADD A PAYMENT CARD
                 </div>
+                </Link>
             </div>
         </button>
 
@@ -76,7 +83,7 @@ const SubBenefit = ()=>{
         </div>
 
         
-
+            
        
             </div>
         </div>
