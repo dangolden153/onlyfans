@@ -1,18 +1,26 @@
 import React from 'react'
 import profile from '../assets/section4.jpg'
 import dp from '../assets/section3.jpg'
+import {toggleItem} from '../../redux/componentReducer/componentReducer.action'
+import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import cancelSvg from '../assests/close.svg'
 
 import './subBenefit.css'
 
-const SubBenefit = ()=>{
+const SubBenefit = ({toggleItem})=>{
 
     return(
         <div className="subBenefit">
-            <div className="benefitBg"></div>
+            <div className="benefitBg" onClick={toggleItem}/>
             <div className="benefitCont">
 
-            <div className="cancelSvg"></div>
+            <div className="cancelSvg"
+            onClick={toggleItem}
+            style={{
+                backgroundImage:`url(${cancelSvg})`
+            }}
+            ></div>
 
             <div className="subBenefitImgBox">
 
@@ -91,4 +99,8 @@ const SubBenefit = ()=>{
     )
 }
 
-export default SubBenefit
+const MapDispatchToProps = Dispatch=>({
+    toggleItem : ()=> (Dispatch(toggleItem()))
+})
+
+export default connect(null,MapDispatchToProps ) (SubBenefit)

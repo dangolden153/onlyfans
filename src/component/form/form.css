@@ -23,7 +23,9 @@
     font-weight: 600;
 }
 .form{
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .formCont{
@@ -44,6 +46,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     line-height: 1.2;
 }
 
@@ -71,6 +74,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     margin-bottom: 15px;
 }
 
@@ -80,6 +84,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 28px;
+    align-items: start;
 }
 
 .formFlex{
@@ -125,4 +130,33 @@
     background: rgba(138,150,163,.25);
     border-radius: 5px;
     color:  rgba(138,150,163,1.25);;
+}
+
+
+@media screen and (max-width: 760px){
+.cardContainer{
+    padding: 0 20px 30px;
+}
+
+.formCont{
+    flex-direction: column;
+}
+
+.formRight{
+    width: 100%;
+    margin-right: unset;
+}
+
+.formleft{
+    margin-top: 35px;
+}
+
+.detailedText{
+    text-align: left;
+    width: 87%;
+}
+
+.textDetails{
+    padding: 10px 0;
+}
 }

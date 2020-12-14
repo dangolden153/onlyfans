@@ -4,18 +4,17 @@ import Files from '../files/files'
 import Picture from '../pictures/pictures'
 import Achieve from '../achieve/achieve'
 import SubBenefit from '../subBenefit/subBenefit'
+import {connect } from 'react-redux'
+import {toggleItem} from '../../redux/componentReducer/componentReducer.action'
 import './subComponent.css'
 import pics from '../assets/bag.svg'
 
 
 
-const SubComponent =()=>{
-    const [state, setState] = useState(true)
+const SubComponent =({hidden,toggleItem})=>{
     const [activeClass, setactiveClass] = useState('first')
 
-    const toggleState = ()=>{
-        setState(!state)
-}
+
 
     return (
 <div className='subComponent'>
@@ -55,7 +54,7 @@ const SubComponent =()=>{
         {activeClass === 'forth' && <Achieve/>}
 
 
-        <button onClick={toggleState}
+        <button onClick={toggleItem}
         className="pictureBtn">
             SUBSCRIBE TO SEE USER'S POSTS
          </button>
@@ -63,19 +62,21 @@ const SubComponent =()=>{
        
  </div>
 
- <div
-               className={state ? "active" : "subBenefitBox"}>
-                   <div className="cancel"
-                   style={{
-                       height:'10px',
-                       width: '10px',
-                       background: 'white'
-                   }}
-                   ></div>
-               <SubBenefit/>
-               </div>
+
+                   
+            {  hidden ? <SubBenefit/> : null } 
+              
  </div>
     )
 }
 
-export default SubComponent
+const MapStateToProps = ({State :{hidden}}) =>({
+    hidden
+})
+
+
+const MapSDispatchToProps = Dispatch=>({
+    toggleItem : ()=>(Dispatch(toggleItem()))
+})
+
+export default connect (MapStateToProps,MapSDispatchToProps)(SubComponent)

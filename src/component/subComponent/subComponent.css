@@ -23,7 +23,7 @@
     width: 25%;
     display: flex;
     justify-content: center;
-    padding: 9px;
+    padding: 9px 92px;
     border-color: rgba(138,150,163,.25) rgba(138,150,163,.25) transparent rgba(138,150,163,.25);
     background: white;
 
@@ -50,4 +50,11 @@
 
 .active{
     display: block;
+}
+
+@media screen and (max-width: 760px){
+.active{
+    padding: 9px 22px;
+    width: unset;
+}
 }

@@ -23,6 +23,8 @@
     position: absolute;
     top: 50%;
     left: 49%;
+    transform: translate(-50%, -50%);
+
 }
 
 .pictureBtn{
@@ -34,7 +36,32 @@
     position: absolute;
     bottom: 100px;
     left: 34%;
+    transform: translate(-50%, -50%);
     border-radius: 29px;
     padding: 10px 20px;
     outline: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px){
+
+    .pictureBtn{
+        bottom: 72px;
+        left: 50%;
+    }
+
+    .lockSvg{
+        top: 46%;
+    }
+
+    .pictureImg{
+        height: 245px;
+    }
+
+    .picsText{
+        padding-left: 10px;
+    }
+    .svgImg{
+        margin: unset;
+    }
 }

@@ -122,3 +122,29 @@ font-family: inherit;
     font-weight: 600;
 }
 
+@media screen and (max-width: 760px){
+    .textContainer{
+        margin-top: 46px;    }
+
+    .subprofilePics{
+        top: 17%;
+        left: 3%;
+    }
+
+    .margin{
+        text-align: left;
+    }
+
+    .profilePics{
+        height: 195px;
+        border-radius: unset;
+    }
+
+    .homeCont{
+        width: 100%;
+    }
+
+    .home{
+        padding: unset;
+    }
+}

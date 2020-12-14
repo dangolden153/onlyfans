@@ -23,3 +23,12 @@ img{
     height: 100%;
     width: 100%
 }
+
+@media screen and (max-width: 760px){
+    .headernav{
+        position: fixed;
+        top: 93%;
+        width: 100%;
+        z-index: 500;
+    }
+}
