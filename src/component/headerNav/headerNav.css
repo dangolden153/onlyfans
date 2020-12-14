@@ -15,8 +15,8 @@
 }
 
 .svgImg{
-    height: 20px;
-    width: 20px;
+    height: 27px;
+    width: 28px;
 }
 
 img{
@@ -25,10 +25,12 @@ img{
 }
 
 @media screen and (max-width: 760px){
-    .headernav{
+    .headernavContainer{
+        padding: 13px 10px;
         position: fixed;
-        top: 93%;
         width: 100%;
+        bottom: 0;
         z-index: 500;
+        background: white;
     }
 }

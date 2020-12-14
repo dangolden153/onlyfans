@@ -1,6 +1,8 @@
 import React, {useState, useEffect, Component} from 'react'
 import Axios from 'axios'
 import FormInput from '../formInput/formInput'
+import arrow from '../assets/left-arrow.svg'
+import {Link} from 'react-router-dom'
 
 import './form.css'
 
@@ -12,11 +14,19 @@ constructor(props){
     this.submitHandle = this.submitHandle.bind(this);
 
     this.state= {
-        email : "",
-        password: "",
+        street : "",
+        city: "",
+        province: "",
+        zip : '',
+        country : "",        
+        email: "",
+        name: "",
         number: "",
-        message : ''
-    }
+        month : '',
+        year : "",
+        cvv: "",
+        
+    } 
 
     
 }
@@ -29,13 +39,23 @@ constructor(props){
 
          submitHandle =(e)=>{
             e.preventDefault()
-            const {email,password,number } = this.state
-            
-            console.log(email, password,number)
+            const {cvv,year,month,name,email,country,
+                zip,street,city,number,province, } = this.state            
+            console.log(email,number)
             Axios.post("http://localhost:5000/login", {
-                name: email,
-                email: password,
-                card: number
+                
+                street : street,
+                city: city,
+                province: province,
+                zip : zip,
+                country :country,        
+                email: email,
+                name: name,
+                number: number,
+                month : month,
+                year : year,
+                cvv: cvv,
+                
             })
             .then((response) => {
                 alert('suceesful inserted')
@@ -48,7 +68,7 @@ constructor(props){
             
         }
 
-     
+      
      
          handleChange= event =>{
             const {name,value} = event.target;
@@ -64,7 +84,15 @@ render(){
         <div className='cardContainer'>
             
             <div className="cardHeader">
-                <div className="svgImg"></div>
+                <Link to='/'
+                className='cardLink'
+                > 
+                <div
+                style={{
+                    backgroundImage: `url(${arrow})`
+                }}
+                 className="svgArrow"/>
+                 </Link>
                 <p className="cardHeading">ADD CARD</p>
             </div>
 
@@ -93,46 +121,46 @@ render(){
 
         <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'street'
+        label='Street'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.street}
         required
         />
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'city'
+        label='City'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.city}
         required
         />
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'province'
+        label='State / Province'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.province}
         required
         />
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'zip'
+        label='Zip / Postal Code'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.zip}
         required
         />
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'country'
+        label='Country'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.country}
         required
         
         />
@@ -155,7 +183,7 @@ render(){
 <FormInput 
         type="text"
         name= 'email'
-        label='email'
+        label='Email'
         onChange={this.handleChange}
         value={this.state.email}
         required
@@ -164,20 +192,20 @@ render(){
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'name'
+        label='Name on the Card'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.name}
         required
         />
 
         
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'number'
+        label='Card Number'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.number}
         required
         />
 <div className="expiration">
@@ -189,10 +217,10 @@ render(){
 <div className="formFlex">
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'month'
+        label='MM'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.month}
         required
         smallWidth
 
@@ -200,10 +228,10 @@ render(){
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'year'
+        label='YYYY'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.year}
         required
         smallWidth
 
@@ -211,10 +239,10 @@ render(){
 
 <FormInput 
         type="text"
-        name= 'email'
-        label='email'
+        name= 'cvv'
+        label='CVC'
         onChange={this.handleChange}
-        value={this.state.email}
+        value={this.state.cvv}
         required
         smallWidth
 

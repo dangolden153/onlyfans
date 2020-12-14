@@ -1,5 +1,9 @@
 import React from 'react'
-import bag from '../assets/bag.svg'
+import home from '../assets/home.svg'
+import bell from '../assets/bell1.svg'
+import file from '../assets/files.svg'
+import message from '../assets/comment.svg'
+import account from '../assets/account.svg'
 
 import './headerNav.css'
 
@@ -11,19 +15,23 @@ const HeaderNav = ()=>{
             <div className="headernavContainer">
 
                 <div className="svgImg">
-                <img src={bag} alt="header icon"/>
+                <img src={home} alt="header icon"/>
                 </div>
                 
                 <div className="svgImg">
-                <img src={bag} alt="header icon"/>
+                <img src={bell} alt="header icon"/>
                 </div>
 
                 <div className="svgImg">
-                <img src={bag} alt="header icon"/>
+                <img src={file} alt="header icon"/>
                 </div>
 
                 <div className="svgImg">
-                <img src={bag} alt="header icon"/>
+                <img src={message} alt="header icon"/>
+                </div>
+
+                <div className="svgImg">
+                <img src={account} alt="header icon"/>
                 </div>
             </div>
         </div>

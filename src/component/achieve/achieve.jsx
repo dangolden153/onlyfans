@@ -1,6 +1,6 @@
 import React from 'react'
 import pics from '../assets/onlyfans-bg.png'
-import svg from '../assets/bag.svg'
+import svg from '../assets/padlock.svg'
 import './achieve.css'
 
 const Achieve =()=>{

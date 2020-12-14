@@ -13,7 +13,7 @@ class Card extends Component {
         this.props.handleLogin(data)
         this.props.history.push('/sub') 
     }
-
+ 
    
     render (){
 

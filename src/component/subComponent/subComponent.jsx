@@ -7,7 +7,10 @@ import SubBenefit from '../subBenefit/subBenefit'
 import {connect } from 'react-redux'
 import {toggleItem} from '../../redux/componentReducer/componentReducer.action'
 import './subComponent.css'
-import pics from '../assets/bag.svg'
+import file from '../assets/files.svg'
+import vid from '../assets/video.svg'
+import pics from '../assets/image.svg'
+// import pics from '../assets/bag.svg'
 
 
 
@@ -22,7 +25,7 @@ const SubComponent =({hidden,toggleItem})=>{
 
 <button className={activeClass  === 'first' ? 'active ': 'subComponentbtn' }onClick={()=>setactiveClass('first') }>
 <div className="svgImg" >
-        <img src={pics} alt="profile img" className='profileImg'/>
+        <img src={file} alt="profile img" className='profileImg'/>
      </div>
 </button>
 
@@ -34,13 +37,13 @@ const SubComponent =({hidden,toggleItem})=>{
 
 <button className={activeClass === 'third' ? 'active ': 'subComponentbtn' } onClick={()=>setactiveClass('third')}> 
 <div className="svgImg" >
-        <img src={pics} alt="profile img" className='profileImg'/>
+        <img src={vid} alt="profile img" className='profileImg'/>
      </div>
 </button>
 
 <button className={activeClass === 'forth' ? 'active ': 'subComponentbtn' } onClick={()=>setactiveClass('forth')}> 
 <div className="svgImg" >
-        <img src={pics} alt="profile img" className='profileImg'/>
+        <img src={file} alt="profile img" className='profileImg'/>
      </div>
 </button>
 

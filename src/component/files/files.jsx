@@ -1,5 +1,5 @@
 import React from 'react'
-import svg from '../assets/bag.svg'
+import svg from '../assets/padlock.svg'
 import pics from '../assets/onlyfans-bg.png'
 
 import './files.css'

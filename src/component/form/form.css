@@ -14,7 +14,11 @@
     margin: 10px 0;
 }
 
-.svgImg{
+.svgArrow{
+    height: 15px;
+    width: 15px;
+    background-position: center;
+    background-size: cover;
     margin-right: 10px;
 }
 
@@ -158,5 +162,10 @@
 
 .textDetails{
     padding: 10px 0;
+}
+
+.onlyfansText{
+    text-align: left;
+    padding: 15px 5px;
 }
 }

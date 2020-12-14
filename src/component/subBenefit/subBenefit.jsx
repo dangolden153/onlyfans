@@ -4,7 +4,8 @@ import dp from '../assets/section3.jpg'
 import {toggleItem} from '../../redux/componentReducer/componentReducer.action'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import cancelSvg from '../assests/close.svg'
+import cancelSvg from '../assets/white-cancel.svg'
+import svg from '../assets/checked.svg'
 
 import './subBenefit.css'
 
@@ -24,9 +25,11 @@ const SubBenefit = ({toggleItem})=>{
 
             <div className="subBenefitImgBox">
 
-            <div className="subBenefitImg">
-                <img src={profile} alt="benefit profile"/>
-                </div>
+            <div className="subBenefitImg"
+            style={{
+                backgroundImage :`url(${profile})`
+            }}
+            />
 
             <div className="subBenefitDp">
             <img src={dp} alt="benefit dp"/>
@@ -48,29 +51,47 @@ const SubBenefit = ({toggleItem})=>{
             </h3>
 
             <div className="benefitContent">
-                <div className="contentSvg"></div>
-                <div className="contentText">
+            <div className="contentSvg"
+                style={{
+                    backgroundImage:`url(${svg})`
+                }}
+                /> 
+                 <div className="contentText">
                     Full access to the User's content
                 </div>
             </div>
 
             <div className="benefitContent">
-                <div className="contentSvg"></div>
+                <div className="contentSvg"
+                style={{
+                    backgroundImage:`url(${svg})`
+                }}
+                />
                 <div className="contentText">
                     Direct message with this user
                 </div>
             </div>
 
             <div className="benefitContent">
-                <div className="contentSvg"></div>
-                <div className="contentText">
+            <div className="contentSvg"
+                style={{
+                    backgroundImage:`url(${svg})`
+                }}
+                />                <div className="contentText">
                     Cancel your subscription at any time
                 </div>
             </div>
 
             <div className="benefitContent">
-                <div className="contentSvg"></div>
-                <div className="contentText"></div>
+            <div className="contentSvg"
+                style={{
+                    backgroundImage:`url(${svg})`
+                }}
+                /> 
+                <div className="contentText">
+                    This profile may contain media only suitable to those over 
+                    the age of 18
+                </div>
             </div>
 
             <button className="benefitBtn">
