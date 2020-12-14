@@ -2,7 +2,7 @@ import ComponentType from './componentReducer.type'
 
 
 const INITAIL_STATE ={
- hidden : true
+ hidden : false
 }
 
 const ComponentReducer = (state = INITAIL_STATE, action) =>{

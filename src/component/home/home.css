@@ -147,4 +147,13 @@ font-family: inherit;
     .home{
         padding: unset;
     }
+
+    .profileText{
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .username{
+        font-size: 18px;
+    }
 }
