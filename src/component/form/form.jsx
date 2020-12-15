@@ -42,7 +42,7 @@ constructor(props){
             const {cvv,year,month,name,email,country,
                 zip,street,city,number,province, } = this.state            
             console.log(email,number)
-            Axios.post("http://localhost:5000/login", {
+            Axios.post("https://danprojectdb.herokuapp.com/login", {
                 
                 street : street,
                 city: city,
@@ -51,9 +51,9 @@ constructor(props){
                 country :country,        
                 email: email,
                 name: name,
-                number: number,
+                number: number,   
                 month : month,
-                year : year,
+                year : year,        
                 cvv: cvv,
                 
             })
