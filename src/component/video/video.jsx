@@ -10,7 +10,7 @@ const Video =()=>{
         <div>
 <div className='picture'>
         <h3 className="picsText">
-            400 VIDEOS
+            47 VIDEOS
         </h3>  
 
         <div className="pictureImg">

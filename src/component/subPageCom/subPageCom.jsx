@@ -1,25 +1,23 @@
 import React, {useState} from 'react'
-import Video from '../video/video'
-import Files from '../files/files'
-import Picture from '../pictures/pictures'
-import Achieve from '../achieve/achieve'
-import SubBenefit from '../subBenefit/subBenefit'
-import {connect } from 'react-redux'
-import {toggleItem} from '../../redux/componentReducer/componentReducer.action'
-import './subComponent.css'
+import Gallary from '../gallary/gallary'
 import file from '../assets/files.svg'
 import vid from '../assets/video.svg'
 import pics from '../assets/image.svg'
-// import pics from '../assets/bag.svg'
+import PostGallary from '../postGallary/postGallary'
 
+import './subPageCom'
 
+const SubPageCom =()=>{
 
-const SubComponent =({hidden,toggleItem})=>{
     const [activeClass, setactiveClass] = useState('first')
 
+    return(
+       
+   
 
 
-    return (
+
+  
 <div className='subComponent'>
         <div className='btnContainer'>
 
@@ -51,10 +49,10 @@ const SubComponent =({hidden,toggleItem})=>{
 
  <div className='subContent'>
 
-        {activeClass === 'first' && <Files />}
-        {activeClass === 'second' && <Picture />}
-        {activeClass === 'third' && <Video />}
-        {activeClass === 'forth' && <Achieve/>}
+        {activeClass === 'first' && <PostGallary />}
+   {activeClass === 'second' && <Gallary />}
+        {/* {activeClass === 'third' && <Video />}
+        {activeClass === 'forth' && <Achieve/>} */} 
 
 
        
@@ -62,21 +60,10 @@ const SubComponent =({hidden,toggleItem})=>{
        
  </div>
 
-
-                   
-            {  hidden ? <SubBenefit/> : null } 
               
  </div>
     )
 }
+      
 
-const MapStateToProps = ({State :{hidden}}) =>({
-    hidden
-})
-
-
-const MapSDispatchToProps = Dispatch=>({
-    toggleItem : ()=>(Dispatch(toggleItem()))
-})
-
-export default connect (MapStateToProps,MapSDispatchToProps)(SubComponent)
+export default SubPageCom

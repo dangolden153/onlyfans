@@ -22,6 +22,17 @@
     background-position: center;
 }
 
+
+
+.navbarIcon{
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
 .profilePicsCont{
     position: relative;
     width: 100%;
@@ -39,7 +50,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    width: 85%;
+    width: 100%;
 }
 
 .subprofilePics{
@@ -103,6 +114,7 @@ font-family: inherit;
     outline: none;
     cursor: pointer;
     color: #00aff0;
+    cursor: pointer;
 }
 
 .subcontianer{
@@ -126,10 +138,12 @@ font-family: inherit;
     border: none;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
+
 }
 
 .textcontent{
-    height: 25px;
+    height: 21px;
     overflow: hidden;
     font-size: 16px;
     font-weight: normal;
@@ -140,7 +154,7 @@ font-family: inherit;
 
 .info{
     height: auto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: normal;
     font-style: normal;
     font-family: inherit;
@@ -149,6 +163,12 @@ font-family: inherit;
 
 .infotext{
     margin: 10px 0 ;
+    height: auto;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: inherit;
+    color: #242529;
 }
 
 @media screen and (max-width: 760px){

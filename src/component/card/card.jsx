@@ -11,7 +11,7 @@ class Card extends Component {
     handleSucesfulAuth(data){
         //redirect the user
         this.props.handleLogin(data)
-        this.props.history.push('/sub') 
+        this.props.history.push('/subpage') 
     }
  
    

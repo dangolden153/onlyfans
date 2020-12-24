@@ -10,7 +10,7 @@ const Achieve =()=>{
 
 <div className='picture'>
         <h3 className="picsText">
-            200 ARCHIEVED POSTS
+            7 ARCHIEVED POSTS
         </h3>  
 
         <div className="pictureImg">

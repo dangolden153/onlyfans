@@ -9,7 +9,7 @@ const Picture =()=>{
     return(
         <div className='picture'>
         <h3 className="picsText">
-            200 PHOTOS
+            63 PHOTOS
         </h3>  
 
         <div className="pictureImg">

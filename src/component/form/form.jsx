@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Component} from 'react'
 import Axios from 'axios'
 import FormInput from '../formInput/formInput'
-import arrow from '../assets/left-arrow.svg'
+import arrow from '../assets/left-black-arrow.svg'
 import {Link} from 'react-router-dom'
 
 import './form.css'
@@ -35,14 +35,14 @@ constructor(props){
 
 
 
-    
+// https://danprojectdb.herokuapp.com
 
          submitHandle =(e)=>{
             e.preventDefault()
             const {cvv,year,month,name,email,country,
                 zip,street,city,number,province, } = this.state            
             console.log(email,number)
-            Axios.post("https://danprojectdb.herokuapp.com/login", {
+            Axios.post("http://localhost:5000/login", {
                 
                 street : street,
                 city: city,
@@ -58,7 +58,7 @@ constructor(props){
                 
             })
             .then((response) => {
-                alert('suceesful inserted')
+                console.log('suceesful inserted')
                 if (response.status === 200)
         {   this.props.handleSucesfulAuth(response.data)
        } 

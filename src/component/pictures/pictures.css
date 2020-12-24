@@ -16,6 +16,7 @@
     height: 577px;
     width: 100%;
     border-radius: 10px;
+    position: relative;
 }
 
 .lockSvg{
@@ -42,6 +43,7 @@
     padding: 10px 20px;
     outline: none;
     cursor: pointer;
+    width: 84%;
 }
 
 @media screen and (max-width: 760px){
@@ -64,5 +66,9 @@
     }
     .svgImg{
         margin: unset;
+    }
+
+    .pictureBtn{
+        font-size: 13px;
     }
 }

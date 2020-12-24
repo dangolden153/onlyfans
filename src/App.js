@@ -5,6 +5,9 @@ import Home from './component/home/home'
 import SubscribePage from './component/subscibePage/subscrubPage'
 import Card  from './component/card/card'
 import HeaderNav from './component/headerNav/headerNav'
+import SubscriptonPage from './pages/subscribePage/subscribePage'
+import NotFoundPage from './component/notFoundPage/notFoundPage'
+
 import {Route, Switch} from 'react-router-dom'
 
 
@@ -56,8 +59,9 @@ render ={ props => (
 
  /> */}
 
- 
+ <Route path='/subpage' component={SubscriptonPage} />
 
+<Route path='/error' component={NotFoundPage} />
 </Switch>
       
     </div>
