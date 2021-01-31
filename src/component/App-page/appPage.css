@@ -1,0 +1,27 @@
+.appContainer{
+    height: 100vh;
+    margin: 0 !important;
+    background-color: #eee;
+}
+
+html{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  Link{
+    text-decoration: none;
+  
+  }

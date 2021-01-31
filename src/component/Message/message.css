@@ -1,0 +1,26 @@
+.message_messg{
+height: 320px;
+overflow-y: scroll;
+}
+
+.message_header{
+
+}
+
+.message_form{
+position: fixed !important;
+right: 1em;
+bottom: 1em;
+left: 0;
+margin-left: 320px !important ;
+z-index: 200;
+}
+
+.message_self{
+    border-left: 2px solid orange;
+    padding-left: 8px;
+}
+
+.menu{
+    padding-bottom: 2em;
+}

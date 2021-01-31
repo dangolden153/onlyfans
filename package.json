@@ -10,7 +10,10 @@
     "axios": "^0.21.0",
     "email-js": "^2.0.2",
     "emailjs-com": "^2.6.3",
+    "firebase": "^8.2.4",
     "framer-motion": "^3.1.1",
+    "mime-type": "^4.0.0",
+    "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
@@ -18,7 +21,11 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
-    "redux-logger": "^3.0.6"
+    "redux-devtools": "^3.7.0",
+    "redux-logger": "^3.0.6",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

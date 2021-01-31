@@ -1,72 +1,54 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
+import Register from './component/register/register'
+import Login from './component/login/login'
+import AppPage from './component/App-page/App-page'
+import Spinner from './component/spinner'
+
+
+import {Switch, Route, useHistory} from 'react-router-dom'
+import firebase from './component/firebase'
+import {connect} from 'react-redux'
+import {currentUser, clearUser} from './redux/userReducer/user.action'
+
+
 import './App.css';
 
-import Home from './component/home/home'
-import SubscribePage from './component/subscibePage/subscrubPage'
-import Card  from './component/card/card'
-import HeaderNav from './component/headerNav/headerNav'
-import SubscriptonPage from './pages/subscribePage/subscribePage'
-import NotFoundPage from './component/notFoundPage/notFoundPage'
+const App =({currentUser,isLoading,clearUser})=>{
 
-import {Route, Switch} from 'react-router-dom'
+  const history = useHistory()
 
-
- class  App extends Component {
-  constructor(){
-    super();
-    this.state={
-      isLoginStatus : "NOT_LOGGED_IN",
-      user: {}
-    }
-
-    this.handleLogin = this.handleLogin.bind(this)
-  }
-
-  handleLogin =(data)=>{
-    this.setState({
-      isLoginStatus : "LOGGED_IN",
-      user: data
-    })
-  }
-
-  render (){
-  return (
-    <div className="App">
-
-    <HeaderNav/>
+  useEffect(()=>{
     
-<Switch>
+    firebase
+    .auth().onAuthStateChanged(user =>{
+      if (user){
+        currentUser(user)
+        history.push('/')
+
+      } else {
+        clearUser()
+        history.push('/login')
+      }
+    })
+  },[])
   
-<Route exact path='/' component={Home} />
+  return (
+  <div>
+    {
+      isLoading ? <Spinner/> :
+    <Switch>
+    <Route path='/' exact component={AppPage} />
+    <Route path='/register'  component={Register} />
+    <Route path='/login' component={Login} />
+
+    </Switch>}
+  </div>
+  
+  )}
+
+  const mapStateToProps =state=>({
+    isLoading : state.user.isLoading
+  })
 
 
-<Route
- path='/card'
-  render ={ props => (
-  <Card {...props} handleLogin={this.handleLogin} isLoginStatus={this.state.isLoginStatus}/>)} />
-
-<Route  
-path='/sub'
-render ={ props => (
-<SubscribePage {...props}  isLoginStatus = {this.state.isLoginStatus}/>)}
-
- />
-
-{/* <Route  
-path='/home'
-render ={ props => (
-<Home {...props}  isLoginStatus = {this.state.isLoginStatus}/>)}
-
- /> */}
-
- <Route path='/subpage' component={SubscriptonPage} />
-
-<Route path='/error' component={NotFoundPage} />
-</Switch>
-      
-    </div>
-  )
-}
-}
-
-export default App;
+export default connect(mapStateToProps,{currentUser,clearUser})(App);

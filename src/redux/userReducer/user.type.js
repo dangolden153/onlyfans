@@ -1,0 +1,5 @@
+export const userActionTypes ={
+    CURRENT_USER: 'CURRENT_USER',
+    CLEAR_USERS: 'CLEAR_USERS',
+    USERS_NUMBERS: 'USERS_NUMBERS'
+}
