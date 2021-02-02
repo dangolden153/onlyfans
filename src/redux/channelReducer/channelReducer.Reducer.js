@@ -2,16 +2,32 @@ import {channelActionType} from './channelReducer.type'
 
 
 const INITIAL_STATE ={
-    currentChannel : null,
-    isloading: true
+    setCurrentChannel : null,
+    isloading: true,
+    privateChannel : null,
+    userCurrentchannel: null
 }
 
 const channelReducer =(state = INITIAL_STATE, action)=>{
     switch (action.type) {
-        case channelActionType.CHANNEL_TYPE:
+        case channelActionType.SET_USER_CHANNEL:
             return{
                 ...state,
-                currentChannel : action.payload,
+                userCurrentchannel : action.payload,
+                isloading: false
+            }
+
+            case channelActionType.PRIVATE_CHANNEL:
+            return{
+                ...state,
+                privateChannel : action.payload,
+                isloading: false
+            }
+
+            case channelActionType.SET_CURRENT_CHANNEL:
+            return{
+                ...state,
+                setCurrentChannel : action.payload,
                 isloading: false
             }
         default:

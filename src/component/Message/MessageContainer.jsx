@@ -17,7 +17,9 @@ class MessageContainer extends Component{
         numUniqueUsers: '',
         searchTerm: '',
         searchLoading: false,
-        searchResult: []
+        searchResult: [],
+        isStarredChannel: false,
+        usersRef: firebase.database().ref('user')
     }
 
     componentDidMount(){
@@ -82,13 +84,50 @@ class MessageContainer extends Component{
 
 
 
+     handleStarred =()=>{
+        this.setState( prev =>({
+            isStarredChannel: !prev.isStarredChannel}),()=>this.StarredChannel())
+        
+    }
+
+     StarredChannel =()=>{
+        const {usersRef, user,channel} =this.state
+        if(this.state.isStarredChannel ){
+            console.log('starred')
+            usersRef
+            .child(`${user.uid}/starred`)
+            .update({
+                [channel.id] :{
+                    name: channel.name,
+                    details: channel.details,
+                    createdBy: {
+                        name: channel.createdBy.name,
+                        avatar: channel.createdBy.avatar
+                    }
+                }
+             })
+           
+        } else{
+            usersRef
+            .child(`${user.uid}/starred`)
+            .child(channel.id)
+            .remove(err=>{
+                if(err !== null){
+                    console.log(err)
+                }
+            })
+
+            console.log('not starred')
+        }
+    }
+
 
 
 
 
     render(){
 
-        const {numUniqueUsers,searchResult,searchTerm} = this.state
+        const {numUniqueUsers,searchResult,searchTerm,isStarredChannel} = this.state
 
         return(
             <Messages
@@ -96,6 +135,8 @@ class MessageContainer extends Component{
             handleSearch={this.handleSearch}
             searchTerm={searchTerm}
             searchResult={searchResult}
+            handleStarred={this.handleStarred}
+            isStarredChannel={isStarredChannel}
             />
         )
     }

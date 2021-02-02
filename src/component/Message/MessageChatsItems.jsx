@@ -11,9 +11,9 @@ const MessageChatsItems =({user, message,searchTerm,searchResult})=>{
  
         return(
  
-        <Comment>
+        <Comment className={message.users.id === user.uid ? "message_self": ""}>
             <Comment.Avatar src={message.users.avatar}/>
-            <Comment.Content className={message.users.id === user.uid ? "message_self": ""} >
+            <Comment.Content  >
             <Comment.Author as="a">{message.users.name}</Comment.Author>
             {/* <Comment.Metadata>{timeFromNow(message.timeStamp)}</Comment.Metadata> */}
             <Comment.Text>{ message.contents}</Comment.Text>

@@ -3,7 +3,7 @@ import {Segment, Input,Button} from 'semantic-ui-react'
 import FileModal from './fileModal'
 import firebase from '../firebase'
 
-const MessageForm =({channel,user,messageRef})=>{
+const MessageForm =({channel,user,messageRef,getMessagesRef})=>{
 
     const [message, setMessage] = useState('')
     const [isLoading, setIsLoading] = useState(false)
@@ -30,7 +30,7 @@ const MessageForm =({channel,user,messageRef})=>{
         console.log(message)
         setIsLoading(true)
         if (message){
-            messageRef
+            getMessagesRef()
             .child(channel.id)
             .push()
             .set(creatMessage())

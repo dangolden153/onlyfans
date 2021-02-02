@@ -1,7 +1,10 @@
 import React from 'react'
 import {Header, Segment, Input, Icon} from 'semantic-ui-react'
 
-const MessageHeader =({channalName,numUniqueUsers,handleSearch})=>{
+const MessageHeader =({channalName,numUniqueUsers
+    ,handleSearch,privateChannel,isStarredChannel, handleStarred})=>{
+
+       
     return(
         <Segment clearing className="message_header">
 
@@ -9,7 +12,11 @@ const MessageHeader =({channalName,numUniqueUsers,handleSearch})=>{
                 <span>
             {channalName}
            
-            <Icon name="star outline" color="black" />
+           {!privateChannel && <Icon 
+           onClick={handleStarred}
+           name={ isStarredChannel ? "star" : "star outline" }
+           color={ isStarredChannel ? "yellow" : "black"}
+           />}
                 </span>
 
                 <Header.Subheader>{numUniqueUsers}</Header.Subheader>

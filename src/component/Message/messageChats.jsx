@@ -8,6 +8,8 @@ class MessageChats extends Component{
 
     state={
         channel: this.props.currentChannel,
+        privateMessageRef: this.props.privateMessageRef,
+        privateChannel:this.props.privateChannel,
         user: this.props.user,
         messageRef: this.props.messageRef,
         messages:[],
@@ -30,13 +32,19 @@ class MessageChats extends Component{
 
     addMessageListener=channelId=>{
         let loadedMessages = []
-
-        this.state.messageRef.child(channelId).on("child_added", snap=>{
-            loadedMessages.push(snap.val())
-            console.log(loadedMessages)
-            this.setState({messages: loadedMessages, messageIsLoading: false })
+        const ref = this.getMessagesRef()
+        ref.child(channelId).on("child_added", snap=>{
+        loadedMessages.push(snap.val())
+        this.setState({messages: loadedMessages, messageIsLoading: false })
         })
     } 
+
+    getMessagesRef= ()=>{
+        const {privateChannel, privateMessageRef, messageRef} = this.state
+        return privateChannel ? privateMessageRef : messageRef
+    }
+
+
 
 //    displayMessages=messages=> {
 //        const {user} = this.state
